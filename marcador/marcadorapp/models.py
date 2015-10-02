@@ -22,6 +22,8 @@ class Meta:
 def __str__(self):
         return self.name
 
+@python_2_unicode_compatible
+
 class Bookmark(models.Model):
     url = models.URLField()
     title = models.CharField('title', max_length=255)
@@ -46,4 +48,5 @@ class Bookmark(models.Model):
         if not self.id:
             self.date_created = now()
         self.date_updated = now()
+        #SUPER CALLS the method save from the database
         super(Bookmark, self).save(*args, **kwargs)
