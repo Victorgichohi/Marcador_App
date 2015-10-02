@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+#links to various project apps 
 urlpatterns = [
+     url(r'^', include('marcadorapp.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
