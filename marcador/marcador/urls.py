@@ -18,10 +18,10 @@ from django.contrib import admin
 
 #links to various project apps 
 urlpatterns = [
-<<<<<<< HEAD
+
      url(r'^', include('marcadorapp.urls')),
-=======
+
     url(r'^', include('marcador.urls')),#emphasize url,so that the bookmark search app can be found.
->>>>>>> 00fa1f0da11a9f1ba3aa6cfb87eebc966b592675
+
     url(r'^admin/', include(admin.site.urls)),
 ]
