@@ -17,5 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^', include('marcador.urls')),#emphasize url,so that the bookmark search app can be found.
     url(r'^admin/', include(admin.site.urls)),
 ]
