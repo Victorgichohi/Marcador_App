@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'marcadorapp'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'marcador.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[os.path.join(BASE_DIR, 'templates')],],#path to template directory
+        'DIRS':[os.path.join(BASE_DIR, 'templates')],#path to template directory
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
