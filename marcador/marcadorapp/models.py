@@ -22,6 +22,13 @@ class Meta:
 def __str__(self):
         return self.name
 
+#returns only the public bookmarks
+class PublicBookmarkManager(models.Manager):
+    def get_queryset(self):
+        qs = super(PublicBookmarkManager, self).get_queryset()
+        return qs.filter(is_public=True)
+
+
 @python_2_unicode_compatible
 
 class Bookmark(models.Model):
