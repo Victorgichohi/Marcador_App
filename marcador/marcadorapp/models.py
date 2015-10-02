@@ -45,14 +45,14 @@ class Bookmark(models.Model):
     objects = models.Manager()
     public = PublicBookmarkManager()
 
- class Meta:
+class Meta:
         verbose_name = 'bookmark'
         verbose_name_plural = 'bookmarks'
         ordering = ['-date_created']
 
   #these functions return strings too
-  def __str__(self):
-        return '%s (%s)' % (self.title, self.url)
+def __str__(self):
+    return '%s (%s)' % (self.title, self.url)
 
     def save(self, *args, **kwargs):
         if not self.id:
