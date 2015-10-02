@@ -41,6 +41,9 @@ class Bookmark(models.Model):
     owner = models.ForeignKey(User, verbose_name='owner',
         related_name='bookmarks')
     tags = models.ManyToManyField(Tag, blank=True)
+   #assigns the public bookmark manager to the models manager
+    objects = models.Manager()
+    public = PublicBookmarkManager()
 
  class Meta:
         verbose_name = 'bookmark'
